@@ -1,1 +1,16 @@
-<p>recipes works!</p>
+<div class="recipes-container">
+  <mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <p>Auto-resizing sidenav</p>
+    </mat-drawer>
+    <mat-drawer-content>
+      <button mat-icon-button class="search-button" *ngIf="!drawerActive" (click)="drawer.toggle(); drawerActive = true">
+        <mat-icon>search</mat-icon>
+      </button>
+      <button mat-icon-button class="search-button" *ngIf="drawerActive" (click)="drawer.toggle(); drawerActive = false">
+        <mat-icon>clear</mat-icon>
+      </button>
+      <div class="recipes-grid"></div>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>

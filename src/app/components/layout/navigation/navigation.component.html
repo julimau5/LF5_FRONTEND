@@ -1,1 +1,14 @@
-<p>navigation works!</p>
+<mat-toolbar>
+  <mat-toolbar-row class="title-row">
+    <span class="main-title">KRAUT UND RUEBEN</span>
+    <div class="menu-options-container">
+      <button mat-icon-button class="toolbar-action-icon">
+        <mat-icon>input</mat-icon>
+      </button>
+    </div>
+  </mat-toolbar-row>
+  <mat-toolbar-row class="navigation-row">
+    <a class="navigation-link" [routerLink]="'/recipes'">Rezepte</a>
+    <a class="navigation-link" [routerLink]="'/ingredients'">Zutaten</a>
+  </mat-toolbar-row>
+</mat-toolbar>

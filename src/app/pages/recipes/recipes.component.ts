@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recipes.component.scss']
 })
 export class RecipesComponent implements OnInit {
+  drawerActive:boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
 
 }

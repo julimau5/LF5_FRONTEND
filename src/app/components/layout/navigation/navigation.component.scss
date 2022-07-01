@@ -1,0 +1,28 @@
+.title-row{
+  justify-content: center;
+}
+
+.menu-options-container {
+  position: absolute;
+  right: 16px;
+}
+
+.main-title {
+  word-spacing: 5px;
+  letter-spacing: 2px;
+  font-size: larger;
+  font-weight: lighter;
+}
+
+.navigation-row {
+  height: 30px;
+  justify-content: center;
+  gap: 15px;
+}
+
+.navigation-link {
+  font-size: medium;
+  font-weight: initial;
+  text-decoration: none;
+  color: inherit
+}
