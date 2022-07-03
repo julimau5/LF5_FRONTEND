@@ -1,0 +1,13 @@
+<mat-card class="recipe-card">
+  <div
+    class="image-container"
+    [ngStyle]="{'background-image': 'url(' + recipe.imageUrl + ')'}"
+  >
+  {{recipe}}
+</div>
+  <mat-card-content>
+    <div class="recipe-title-container">
+      <h2>{{ recipe.name }}</h2>
+    </div>
+  </mat-card-content>
+</mat-card>

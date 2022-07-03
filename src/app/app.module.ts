@@ -9,6 +9,7 @@ import { RecipesComponent } from './pages/recipes/recipes.component';
 import { IngredientsComponent } from './pages/ingredients/ingredients.component';
 //components
 import { NavigationComponent } from './components/layout/navigation/navigation.component';
+import { RecipeCardComponent } from './components/recipes/recipe-card/recipe-card.component';
 //material design modules
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -17,6 +18,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatTableModule} from '@angular/material/table';
+import { IngredientsTableComponent } from './components/ingredients/ingredients-table/ingredients-table.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     RecipesComponent,
     IngredientsComponent,
     NavigationComponent,
+    RecipeCardComponent,
+    IngredientsTableComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +41,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatInputModule,
     MatFormFieldModule,
     MatSidenavModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

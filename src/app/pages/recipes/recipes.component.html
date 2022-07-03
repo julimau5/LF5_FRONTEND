@@ -10,7 +10,12 @@
       <button mat-icon-button class="search-button" *ngIf="drawerActive" (click)="drawer.toggle(); drawerActive = false">
         <mat-icon>clear</mat-icon>
       </button>
-      <div class="recipes-grid"></div>
+      <div class="recipes-grid">
+        <app-recipe-card></app-recipe-card>
+        <app-recipe-card></app-recipe-card>
+        <app-recipe-card></app-recipe-card>
+        <app-recipe-card></app-recipe-card>
+      </div>
     </mat-drawer-content>
   </mat-drawer-container>
 </div>
