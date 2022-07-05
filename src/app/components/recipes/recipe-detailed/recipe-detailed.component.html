@@ -1,0 +1,75 @@
+<div class="recipe-details-container" *ngIf="recipe">
+  <h1>{{ recipe.name }}</h1>
+  <div class="row">
+    <div
+      class="recipe-image"
+      [ngStyle]="{ 'background-image': 'url(' + recipe.imageUrl + ')' }"
+    ></div>
+    <div class="info-container">
+      <div mat-subheader>Ernährungskategorien</div>
+      <mat-chip-list *ngIf="recipe.categories.length > 0">
+        <mat-chip
+          color="primary"
+          *ngFor="let category of recipe.categories"
+          selected
+        >
+          {{ category }}
+        </mat-chip>
+      </mat-chip-list>
+      <mat-hint *ngIf="recipe.categories.length < 1"
+        >dieses Rezept gehört noch zu keiner Nahrungskategorie</mat-hint
+      >
+      <div mat-subheader>Beschränkungen</div>
+      <mat-chip-list *ngIf="recipe.restrictions.length > 0">
+        <mat-chip
+          color="accent"
+          *ngFor="let restriction of recipe.restrictions"
+          selected
+        >
+          {{ restriction }}
+        </mat-chip>
+      </mat-chip-list>
+      <mat-hint *ngIf="recipe.restrictions.length < 1"
+        >dieses Rezept gehört noch zu keiner Nahrungskategorie</mat-hint
+      >
+      <div mat-subheader>Übersicht</div>
+      <mat-list>
+        <mat-list-item>
+          <mat-icon mat-list-icon>whatshot</mat-icon>
+          <div mat-line>{{ calories }} kC</div>
+          <div mat-line>KALORIEN</div>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon mat-list-icon>fiber_manual_record</mat-icon>
+          <div mat-line>{{ carbs }} mg</div>
+          <div mat-line>KOHLENHYDRATE</div>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon mat-list-icon>egg</mat-icon>
+          <div mat-line>{{ calories }} mg</div>
+          <div mat-line>PROTEIN</div>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="directions-container">
+      <h2>Zubereitung</h2>
+      <p class="preparation">{{recipe.directions}}</p>
+    </div>
+    <div class="ingredients-list-container">
+      <h2>Zutaten</h2>
+      <mat-list>
+        <mat-list-item *ngFor="let ingredient of recipe.ingredients">
+          <div class="ingredient-row">
+            <div class="ingredient-name">{{ingredient.name}}</div>
+            <div class="ingredient-amount">{{ingredient.amount}}</div>
+            <div class="ingredient-units">{{ingredient.units}}</div>
+            <div class="ingredient-units">€{{ingredient.price}}</div>
+          </div>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+</div>

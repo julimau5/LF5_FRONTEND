@@ -4,3 +4,21 @@
   gap: 1rem;
 }
 
+.recipe-modal{
+position: absolute;
+top: 20px;
+width: 100vw;
+background-color: white;
+z-index: 5;
+height: calc(100vh - 20px);
+overflow: scroll;
+}
+
+.close-modal-button {
+position: absolute;
+right: 5px;
+}
+
+.fixed{
+  position: fixed;
+}

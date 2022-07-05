@@ -1,12 +1,13 @@
-import { IngredientAmount } from "./ingredient.interface";
+import { IngredientData } from "./ingredient.interface";
 
 export interface RecipeData {
   id: number;
   name: string;
   directions: string;
   imageUrl: string;
-  categoriesIds: string[];
-  restrictionsIds: string[];
+  categoriesIds: number[];
+  restrictionsIds: number[];
+  ingredientsIds: number[];
 }
 
 export interface RecipeShorted {
@@ -24,7 +25,7 @@ export interface RecipeFull {
   imageUrl: string;
   categories: string[];
   restrictions: string[];
-  ingredients: IngredientAmount[]
+  ingredients: IngredientData[]
 }
 
 export interface RecipeDataDTO extends Omit<RecipeData, 'id'>{}

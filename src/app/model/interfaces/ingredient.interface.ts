@@ -8,14 +8,7 @@ export interface IngredientData {
   calories: number;
   carbs: number;
   protein: number;
-}
-
-export interface IngredientAmount {
-  id: number;
-  name: string;
-  units: string;
-  amount: number;
-  price: number;
+  amount?: number;
 }
 
 export interface IngredientShort {

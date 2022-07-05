@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { IngredientShort } from 'src/app/model/interfaces/ingredient.interface';
+import { IngredientsService} from 'src/app/services/http/ingredients.service';
 
 @Component({
   selector: 'app-ingredients-table',
@@ -7,17 +9,14 @@ import { IngredientShort } from 'src/app/model/interfaces/ingredient.interface';
   styleUrls: ['./ingredients-table.component.scss']
 })
 export class IngredientsTableComponent implements OnInit {
-  ingredients: IngredientShort[] = [
-    { id: 1, name: 'Ingredient One', price: 1.2},
-    { id: 2, name: 'Ingredient Two', price: 1.3},
-    { id: 3, name: 'Ingredient Three', price: 1.1},
-    { id: 4, name: 'Ingredient Four', price: 0.2},
-  ]
+  ingredients!: IngredientShort[]
   displayedColumns: string[] = ['id', 'Bezeichnung', 'Preis'];
 
-  constructor() { }
+  constructor(private _ingredientsService: IngredientsService) { }
 
   ngOnInit(): void {
+    this._ingredientsService.getIngredients()
+      .subscribe((data) => this.ingredients = data )
   }
 
 }

@@ -1,0 +1,48 @@
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0px 15px;
+}
+
+.recipe-image {
+  height: 60vh;
+  width: 50vw;
+  border-radius: none;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.info-container {
+  width: 40vw;
+}
+
+.mat-list-base .mat-list-item.mat-2-line,
+.mat-list-base .mat-list-option.mat-2-line {
+  height: 72px;
+  height: 50px;
+}
+
+.mat-list-base {
+  padding-top: 0;
+}
+
+.directions-container {
+  width: 50%;
+}
+
+.ingredients-list-container {
+  width: 46%;
+}
+
+.ingredient-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.preparation {
+  text-align: justify;
+}
